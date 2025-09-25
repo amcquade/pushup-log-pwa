@@ -1,0 +1,22 @@
+# The name of your app. This will be part of the URL.
+name: pushup-app
+
+# Use the "recipe" for a simple LAMP, LEMP, or MEAN stack.
+# We'll use a simple "lemp" (Linux, Nginx, MySQL, PHP) recipe here,
+# but we'll only use the Nginx part for your static site.
+recipe: lemp
+
+# Configure the services Lando will build.
+config:
+  # Set the webroot to the current directory where your index.html is.
+  webroot: .
+  # You can specify a PHP version, though it's not needed for a static site.
+  # php: '8.1'
+
+# Proxy configuration to enable local hostnames.
+proxy:
+  # This sets up the web server service to be the target for our hostname.
+  appserver:
+    # This will be your local URL.
+    # Lando automatically adds ".lndo.site" to your app name.
+    - pushup-app.lndo.site

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Push-up Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#3367D6">
+</head>
+<body>
+    <div class="container">
+        <h1>Push-up Tracker 💪</h1>
+        <form id="pushup-form">
+            <input type="number" id="pushup-input" placeholder="How many push-ups?" required min="1">
+            <button type="submit">Log Push-ups</button>
+        </form>
+        <h2>History</h2>
+        <ul id="history-list">
+            </ul>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
