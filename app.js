@@ -17,17 +17,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const renderHistory = () => {
         const pushups = getPushups();
         historyList.innerHTML = ''; // Clear the list first
+        
         if (pushups.length === 0) {
-            historyList.innerHTML = '<li>No push-ups logged yet.</li>';
+            // Use Bootstrap's placeholder styling for the empty state
+            historyList.innerHTML = '<li class="list-group-item text-center text-muted">No push-ups logged yet.</li>';
             return;
         }
+
         // Sort by date, newest first
         pushups.sort((a, b) => new Date(b.date) - new Date(a.date));
         
         pushups.forEach(entry => {
             const li = document.createElement('li');
-            const countText = `<strong>${entry.count}</strong> push-ups`;
-            const dateText = `<span>${new Date(entry.date).toLocaleString()}</span>`;
+            // Add Bootstrap classes to the list item
+            li.className = 'list-group-item d-flex justify-content-between align-items-center';
+
+            const countText = `<span><strong>${entry.count}</strong> push-ups</span>`;
+            
+            // Format the date nicely
+            const dateText = `<span class="text-muted small">${new Date(entry.date).toLocaleString()}</span>`;
+
             li.innerHTML = `${countText}${dateText}`;
             historyList.appendChild(li);
         });
