@@ -1,14 +1,10 @@
 name: pushup-app
-recipe: lemp
-
-config:
-  via: nginx
-  webroot: .
-  ssl: true
 proxy:
   appserver:
     - pushup-app.lndo.site
 services:
   appserver:
+    type: apache
+    ssl: true
     build_as_root:
       - apt-get update && apt-get install vim -y 

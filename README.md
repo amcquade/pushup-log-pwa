@@ -9,16 +9,18 @@ A simple, offline-first Progressive Web App (PWA) to track your daily push-ups. 
 ---
 
 ## 📚 Table of Contents
-- [✨ Features](#-features)
-- [🛠️ Tech Stack](#️-tech-stack)
-- [🚀 Getting Started](#-getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [📖 Usage](#-usage)
-- [📈 Future Improvements](#-future-improvements)
-  - [MVP Features](#mvp-features)
-  - [Nice-to-Have Features](#nice-to-have-features)
-- [📄 License](#-license)
+- [Push-up Tracker PWA](#push-up-tracker-pwa)
+  - [📚 Table of Contents](#-table-of-contents)
+  - [✨ Features](#-features)
+  - [🛠️ Tech Stack](#️-tech-stack)
+  - [🚀 Getting Started](#-getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+  - [📖 Usage](#-usage)
+  - [📈 Future Improvements](#-future-improvements)
+    - [MVP Features](#mvp-features)
+    - [Nice-to-Have Features](#nice-to-have-features)
+  - [📄 License](#-license)
 
 ---
 
@@ -49,13 +51,13 @@ You must have **Lando** installed on your machine. Lando is used to create a con
 ### Installation
 Clone the repository:
 ```bash
-git clone https://github.com/your-username/pushup-tracker.git
+git clone https://github.com/amcquade/.git
 ````
 
 Navigate to the project directory:
 
 ```bash
-cd pushup-tracker
+cd pushup-log-pwa
 ```
 
 Start the Lando development server:
