@@ -1,4 +1,3 @@
-````markdown
 # Push-up Tracker PWA
 
 ![License](https://img.shields.io/badge/license-MIT-green)  
