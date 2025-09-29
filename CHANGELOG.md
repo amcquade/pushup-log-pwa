@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.0.1] - 2025-09-29
+### Added
+- Ability to delete an entry
+- All time total
+- Total by day, total by week
+
 ## [1.0.0] - 2025-09-25
 ### Added
 - Basic PWA structure with Web App Manifest and Service Worker.
