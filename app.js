@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Determine the base URL for asset loading (crucial for GitHub Pages subdirectories)
     // If local, base is just '/'. If production, it includes the repo name.
-    const BASE_URL = IS_LOCAL ? '/' : '/pushup-log-pwa/'; // <-- IMPORTANT: Replace 'pushup-tracker' with your repo name if different!
+    const BASE_URL = IS_LOCAL ? '/' : '/pushup-log-pwa/';
 
     if (IS_LOCAL) {
         console.log(`Running in Local Development Mode. Base URL: ${BASE_URL}`);
