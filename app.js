@@ -3,6 +3,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const input = document.getElementById('pushup-input');
     const historyList = document.getElementById('history-list');
     const allTimeTotalEl = document.getElementById('all-time-total');
+    const themeToggle = document.getElementById('theme-toggle');
+
+    // --- Dark Mode Logic ---
+    const setTheme = (theme) => {
+        document.documentElement.setAttribute('data-bs-theme', theme);
+        localStorage.setItem('theme', theme);
+        if (themeToggle) {
+            themeToggle.checked = theme === 'dark';
+        }
+    };
+
+    if (themeToggle) {
+        themeToggle.addEventListener('change', () => {
+            setTheme(themeToggle.checked ? 'dark' : 'light');
+        });
+    }
+
+    // Load saved theme or use system preference
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (savedTheme) {
+        setTheme(savedTheme);
+    } else if (prefersDark) {
+        setTheme('dark');
+    } else {
+        setTheme('light');
+    }
+    // --- End Dark Mode Logic ---
 
     // Determine environment for correct Service Worker pathing
     const IS_LOCAL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.hostname.endsWith('.lndo.site');

@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Ability to delete an entry
 - All time total
 - Total by day, total by week
+- Dark mode toggle
 
 ## [1.0.0] - 2025-09-25
 ### Added
