@@ -16,10 +16,13 @@ A simple, offline-first Progressive Web App (PWA) to track your daily push-ups. 
   - [🚀 Getting Started](#-getting-started)
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
+  - [Lando Commands](#lando-commands)
+    - [Basic Commands](#basic-commands)
+    - [CLI](#cli)
+      - [ssh](#ssh)
+      - [logs](#logs)
   - [📖 Usage](#-usage)
   - [📈 Future Improvements](#-future-improvements)
-    - [MVP Features](#mvp-features)
-    - [Nice-to-Have Features](#nice-to-have-features)
   - [📄 License](#-license)
 
 ---
@@ -71,6 +74,45 @@ Access the application:
 Once Lando is finished, it will provide you with a list of app URLs. You can access the application in your browser at:
 [http://pushup-app.lndo.site](http://pushup-app.lndo.site)
 
+## Lando Commands
+
+### Basic Commands
+
+| Command         | Description             |
+|-----------------|-------------------------|
+| `lando start`   | Start all services      |
+| `lando stop`    | Stop all services       |
+| `lando restart` | Restart all services    |
+| `lando rebuild` | Rebuild the environment |
+
+### [CLI](https://docs.lando.dev/cli/)
+
+#### [ssh](https://docs.lando.dev/cli/ssh)
+
+- Shell into a service:
+  ```bash
+  lando ssh -s appserver
+  ```
+- To use root:
+  ```bash
+  lando ssh -s appserver --user root
+  ```
+
+#### [logs](https://docs.lando.dev/cli/logs.html)
+
+- Get the logs:
+  ```bash
+  lando logs
+  ```
+- Follow the logs and show timestamps:
+  ```bash
+  lando logs -t -f
+  ```
+- Show logs for specific services:
+  ```bash
+  lando logs -s appserver -s database
+  ```
+
 ---
 
 ## 📖 Usage
@@ -85,24 +127,15 @@ Once Lando is finished, it will provide you with a list of app URLs. You can acc
 
 ## 📈 Future Improvements
 
-### MVP Features
-
-These are essential features that improve usability and reliability.
-
-| Status | Feature                                                             |
-| ------ | ------------------------------------------------------------------- |
-| [ ]    | Add the ability to edit or delete past entries                      |
-| [ ]    | Implement data visualization with charts to show progress over time |
-| [ ]    | Add a feature to export or import data as a JSON or CSV file        |
-
-### Nice-to-Have Features
-
-These add polish and advanced functionality but are not critical for core use.
-
-| Status | Feature                                                                         |
-| ------ | ------------------------------------------------------------------------------- |
-| [ ]    | Migrate from localStorage to IndexedDB for more robust and larger-scale storage |
-| [ ]    | Add a dark mode toggle                                                          |
+| Feature                                                             |
+|---------------------------------------------------------------------|
+| Add the ability to edit or delete past entries                      |
+| Implement data visualization with charts to show progress over time |
+| Add a feature to export or import data as a JSON or CSV file        |
+| Dark mode toggle                                                    |
+| Offline Mode                                                        |
+| Daily totals (Shown on screen and by date)                          |
+| Pull up tracker                                                     |
 
 ---
 
