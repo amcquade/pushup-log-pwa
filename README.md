@@ -4,6 +4,9 @@
 ![PWA Ready](https://img.shields.io/badge/PWA-ready-blue)  
 ![Built With](https://img.shields.io/badge/built%20with-Lando-orange)
 
+[![Try it Live](https://img.shields.io/badge/Try%20it%20Live-Click%20Here-blue?style=for-the-badge)](https://amcquade.github.io/pushup-log-pwa/)
+
+
 A simple, offline-first Progressive Web App (PWA) to track your daily push-ups. This application is designed to be fast, reliable, and installable on any device (mobile or desktop) directly from the browser. All data is stored locally in your browser's localStorage.
 
 ---
@@ -129,7 +132,7 @@ Once Lando is finished, it will provide you with a list of app URLs. You can acc
 
 | Feature                                                             |
 |---------------------------------------------------------------------|
-| Add the ability to edit or delete past entries                      |
+| Add the ability to edit past                                        |
 | Implement data visualization with charts to show progress over time |
 | Add a feature to export or import data as a JSON or CSV file        |
 | Dark mode toggle                                                    |

@@ -10,7 +10,8 @@ let urlsToCache = [
     'android-chrome-512x512.png',
     'favicon-16x16.png',
     'favicon-32x32.png',
-    'manifest.json'
+    'manifest.json',
+    'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css'
 ];
 
 self.addEventListener('install', event => {
